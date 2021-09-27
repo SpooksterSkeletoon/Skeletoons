@@ -17,7 +17,7 @@ window.onload = function () {
     transferNFT();
   }
 };
-var walletID = "x";
+var walletID = "a";
 var theTransactionHash = "";
 var abi = [
 	{
