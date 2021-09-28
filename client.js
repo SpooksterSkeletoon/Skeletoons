@@ -692,7 +692,7 @@ function connectWallet() {
 			if (acc.length > 0) {
 			  console.log(acc);
 			  walletID = acc[0];
-			  document.getElementById("demo").innerHTML = "CONNECTED!";
+			  document.getElementById("demo").innerHTML = "CONNECTED! WALLET:" + acc[0];
 			  return;
 			}
 		  });
