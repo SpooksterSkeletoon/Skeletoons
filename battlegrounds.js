@@ -1,7 +1,7 @@
 window.onload = function () {
     console.log("Client-side code running");
   
-    viewinbattle();
+    viewInBattle();
   
     document.getElementById("connect wallet").onclick = function connect() {
       connectWallet();
