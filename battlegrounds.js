@@ -1,10 +1,14 @@
 window.onload = function () {
     console.log("Client-side code running");
   
-    viewInBattle();
+    
   
     document.getElementById("connect wallet").onclick = function connect() {
       connectWallet();
+    };
+    
+    document.getElementById("show nft").onclick = function show() {
+        viewInBattle();
     };
 
 };
