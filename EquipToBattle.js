@@ -22,9 +22,6 @@ window.onload = function () {
     registerSkeletoon();
   };
 
-  document.getElementById("removetoken").onclick = function show() {
-    removeFromBattleGrounds();
-  };
 };
 var walletID = "x";
 var theTransactionHash = "";
