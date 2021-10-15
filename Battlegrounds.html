@@ -15,7 +15,7 @@
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i">
     
-    <script type= "text/javascript" src="battlegrounds.js"></script>
+    <script type= "text/javascript" src="BattleGrounds.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
       
@@ -42,7 +42,7 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-custom-font u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-custom-color-1 u-text-custom-color-1" href="FAQ.html" style="padding: 10px 20px;">FAQ</a>
+            <ul class="u-custom-font u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-custom-color-1 u-text-custom-color-1" href="BattleGrounds.html" style="padding: 10px 20px;">BattleGrounds</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-custom-color-1 u-text-custom-color-1" href="Mint.html" style="padding: 10px 20px;">Minter</a>
 </li></ul>
           </div>
@@ -60,22 +60,109 @@
         </nav>
         <a href="#" class="u-border-none u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-hover-custom-color-2 u-radius-10 u-text-body-color u-btn-1" id="connect wallet">Connect Wallet<br>
         </a>
-        <img class="u-image u-image-default u-image-1" src="images/Untitled_Artwork1.png" alt="" data-image-width="6000" data-image-height="1278">
+        <img class="u-image u-image-default u-image-1" src="images/Untitled_Artwork1.png" alt="" data-image-width="6000" data-image-height="1278" style="right: 50px">
       </div></header>
     <section class="u-clearfix u-grey-70 u-section-1" id="sec-e34b">
       <div class="u-align-left u-clearfix u-sheet u-valign-middle u-sheet-1">
         <p class="u-align-center u-custom-font u-text u-text-custom-color-1 u-text-1" id="demo">Please connect your wallet</p>
       </div>
     </section>
+    <section class="u-clearfix u-grey-70 u-section-1" id="sec-8d31">
+        <div class="u-clearfix u-sheet u-sheet-1">
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">Welcome to Spooky Skeletoons battlegrounds. Here you can fight other skeletoons for FTM. To get started register your Spooky Skeletoon token with battlegrounds contract down bellow. Detailed info on battlegrounds can be found at the bottom of this page</p>
+        </div>
+    </section>
+    <section class="u-clearfix u-grey-70 u-section-1" id="sec-8d31">
+        <form action="#" method="POST" class="u-clearfix u-form-horizontal u-form-spacing-15 u-inner-form" style="padding: 15px" source="custom">
+            <div class="u-form-group">
+              <label for="email-558c" class="u-form-control-hidden u-label">Email</label>
+              <input type="text" placeholder="Token Id:" id="tokenidregister" name="token_id" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-radius-10" required="required">
+            </div>
+            <div class="u-form-group u-form-submit">
+              <a href="#" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-hover-custom-color-2 u-radius-10 u-text-body-color u-btn-1" id="registertoken">Register token for battlegrounds</a>
+              <input type="submit" value="submit" class="u-form-control-hidden">
+            </div>
+            <input type="hidden" value="" name="recaptchaResponse">
+          </form>
+    </section>
+    <section class="u-clearfix u-grey-70 u-section-1" id="sec-8d31">
+        <form action="#" method="POST" class="u-clearfix u-form-horizontal u-form-spacing-15 u-inner-form" style="padding: 15px" source="custom">
+            <div class="u-form-group">
+              <label for="email-558c" class="u-form-control-hidden u-label">Email</label>
+              <input type="text" placeholder="Token Id:" id="returnfrombattlegrounds" name="token_id" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-radius-10" required="required">
+            </div>
+            <div class="u-form-group u-form-submit">
+              <a href="#" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-hover-custom-color-2 u-radius-10 u-text-body-color u-btn-1" id="removetoken">Remove Skeletoon from battlegrounds</a>
+              <input type="submit" value="submit" class="u-form-control-hidden">
+            </div>
+            <input type="hidden" value="" name="recaptchaResponse">
+          </form>
+    </section>
+    <section class="u-clearfix u-grey-70 u-section-3" id="sec-9d59">
+        <div class="u-clearfix u-sheet u-sheet-1">
+          <a href="SendToBattlegrounds.html" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-hover-custom-color-2 u-radius-10 u-text-body-color u-btn-1" id="show nft">Send Skeletoon to battlegrounds</a>
+          <div class="u-container-style u-group u-shape-rectangle u-group-1">
+            <div class="u-container-layout u-container-layout-1" id="placetoshownfts"></div>
+          </div>
+        </div>
+      </section>
     <section class="u-clearfix u-grey-70 u-section-3" id="sec-9d59">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <a href="Mint.html#sec-9d59" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-hover-custom-color-2 u-radius-10 u-text-body-color u-btn-1" id="show nft">My Skeletoons</a>
+        <a href="EquipToBattle.html" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-hover-custom-color-2 u-radius-10 u-text-body-color u-btn-1" id="show nft">Challange Skeletoons</a>
         <div class="u-container-style u-group u-shape-rectangle u-group-1">
           <div class="u-container-layout u-container-layout-1" id="placetoshownfts"></div>
         </div>
       </div>
     </section>
-
+    <section class="u-clearfix u-grey-70 u-section-1" id="sec-8d31">
+        <form action="#" method="POST" class="u-clearfix u-form-horizontal u-form-spacing-15 u-inner-form" style="padding: 15px" source="custom">
+            <div class="u-form-group">
+              <label for="email-558c" class="u-form-control-hidden u-label">Email</label>
+              <input type="text" placeholder="Battle Id:" id="battlelog" name="BattleLog" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-radius-10" required="required">
+            </div>
+            <div class="u-form-group u-form-submit">
+              <a href="#" class="u-btn u-btn-round u-button-style u-custom-color-1 u-custom-font u-hover-custom-color-2 u-radius-10 u-text-body-color u-btn-1" id="battlebutton">View Battle Log</a>
+              <input type="submit" value="submit" class="u-form-control-hidden">
+            </div>
+            
+          </form>
+          <div class="u-container-style u-group u-shape-rectangle u-group-1">
+            <div class="u-container-layout u-container-layout-1" id="battlelogshow"></div>
+        </div>
+    </section>
+    <section class="u-clearfix u-grey-70 u-section-1" id="sec-8d31">
+        <div class="u-battlegrounds-info">
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">In Spooky Skeletoons battlegrounds you can either submit your Skeletoon or challenge Skeletoon in duel.</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">To submit your Skeletoon Click "Send Skeletoon to battlegrounds". Afterwards you will have to input your Skeletoon id to summont it, enter prize amount for defeating it, entry amount to challange it, select movelist and send it to battlegrounds. Payments are done in FTM, and winning Skeletoon gets winnings of prize plus entry fee.</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">To challenge a Skeletoon click button "Challange Skeletoons" where you will be taken to battlegrounds page with all Skeletoons currently in battlegrounds. Select which one you want to challange and click on the skull button. Afterwards you will have to summon your Skeletoon to submit a movelist</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">After fulling your movelist you will be prompted twice, first time to send your movelist and second time to either challenge to duel or send Skeletoon to battlegrounds</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">You can remove your Skeletoon from battlegrounds at any time. By doing so skeletoon can't be challenged unless he is sent to battlegrounds again, and FTM submited as prize is returned to you.</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">Duels have two winning conditions: Deal more damage than your opponent, or deplete your opponents HP to 0</p>  
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">Duel logic is done by going trough Challenged and Challenger movelist from top to bottom one move at the time. With Challenged having first move.</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">If damage dealt is equal win goes to Challenged Skeletoon.</p>  
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">While Battling Skeletoons have following stats:</p> 
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">* HP</p> 
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">* Damage</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">* Damage over time</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">* Chance to hit</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">* Damage multiplier</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">* Ignore Enemy defences</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">* Chance to evade attack</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">* Damage reduction</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">* Damage flat reduction</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">* Reflect damage</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">* Prevent next damage taken</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">Out of these stats, only Damage and Ignore Enemy defences is non-stacking stats, which do not persist into other turns.</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">Prevent Damage taken reduces next incoming damage to 0</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">Default chance to hit is 90% and can be reduced by enemies chance to evade attack, or increased by your chance to hit enemy action</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">Damage over time persists till end of game and can be stacked from multiple sources.</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">Damage multiplier and damage reduction are summed and aplied to your rolled damage, when damage is dealt.</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">Damage flat reduction reduces damage by flat number amount</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">Reflect damage reflect portion of dealt damage to enemy Skeletoon</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">HP persist trough all battles with only way to regain it is lucky cape or ERR action roll. In future there will be some sort of way to refresh HP more deterministically, but as of now be mindful of wear and tear on your Skeletoon</p>
+          <p class="u-align-left u-custom-font u-text u-text-custom-color-1 u-text-default u-text-1">If you have additional questions about battlegrounds check out our discord, where I'll be there to answer them. Good luck and have fun !</p>
+        </div>
+    </section>
     
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-097f"><div class="u-clearfix u-sheet u-sheet-1">

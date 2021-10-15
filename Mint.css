@@ -171,3 +171,15 @@
     margin-right: 0;
   }
 }
+
+.u-battlegrounds-info {
+  font-weight: 700;
+  font-family: Arvo;
+  margin: 15px auto 0 26px;
+  border: 3px solid #121111;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #2d2a2a;
+  text-align: center;
+  color: #c56a0a;
+}

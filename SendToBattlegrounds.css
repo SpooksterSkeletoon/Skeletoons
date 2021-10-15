@@ -1,0 +1,350 @@
+.u-section-1 .u-sheet-1 {
+    min-height: 85px;
+  }
+  
+  .u-section-1 .u-text-1 {
+    font-family: Arvo;
+    font-weight: 700;
+    width: 614px;
+    margin: 30px auto;
+  }
+  
+  @media (max-width: 767px) {
+    .u-section-1 .u-text-1 {
+      width: 540px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .u-section-1 .u-text-1 {
+      width: 340px;
+    }
+  }
+  .u-section-2 .u-sheet-1 {
+    min-height: 376px;
+  }
+  
+  .u-section-2 .u-group-1 {
+    width: 926px;
+    min-height: 236px;
+    height: auto;
+    margin: 32px auto 0;
+  }
+  
+  .u-section-2 .u-image-1 {
+    width: 236px;
+    height: 236px;
+    margin: 0 auto 0 0;
+  }
+  
+  .u-section-2 .u-image-2 {
+    width: 236px;
+  }
+  
+  .u-section-2 .u-image-3 {
+    width: 236px;
+    left: auto;
+    right: 0;
+  }
+  
+  .u-section-2 .u-btn-1 {
+    font-weight: 700;
+    font-size: 0.9375rem;
+    font-family: Arvo;
+    background-image: none;
+    margin: 32px auto;
+  }
+  
+  @media (max-width: 1199px) {
+    .u-section-2 .u-group-1 {
+      height: auto;
+    }
+  
+    .u-section-2 .u-btn-1 {
+      border-style: none;
+      padding: 8px 33px;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .u-section-2 .u-group-1 {
+      width: 720px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .u-section-2 .u-group-1 {
+      width: 540px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .u-section-2 .u-group-1 {
+      width: 340px;
+    }
+  }
+  .u-section-3 .u-sheet-1 {
+    min-height: 227px;
+  }
+  
+  .u-section-3 .u-btn-1 {
+    font-weight: 700;
+    font-size: 0.9375rem;
+    font-family: Arvo;
+    background-image: none;
+    margin: 36px auto 0;
+  }
+  
+  .u-section-3 .u-group-1 {
+    width: 672px;
+    min-height: 49px;
+    margin: 38px auto 60px;
+  }
+  
+  .u-section-3 .u-container-layout-1 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  @media (max-width: 1199px) {
+    .u-section-3 .u-container-layout-1 {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .u-section-3 .u-group-1 {
+      width: 540px;
+    }
+  
+    .u-section-3 .u-container-layout-1 {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .u-section-3 .u-group-1 {
+      width: 340px;
+    }
+  }
+  .u-section-4 .u-sheet-1 {
+    min-height: 159px;
+  }
+  
+  .u-section-4 .u-text-1 {
+    font-weight: 700;
+    font-family: Arvo;
+    margin: 30px auto 0 26px;
+  }
+  
+  .u-section-4 .u-form-1 {
+    height: 77px;
+    margin: 11px 559px 16px 11px;
+  }
+  
+  .u-section-4 .u-btn-1 {
+    font-weight: 700;
+    font-size: 0.9375rem;
+    font-family: Arvo;
+    background-image: none;
+  }
+  
+  .u-move-list {
+    left: -250px;
+    top: -350px;
+    position: relative;
+    font-weight: 700;
+    font-family: Arvo;
+    margin: 15px auto 0 26px;
+    border: 3px solid #121111;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #2d2a2a;
+    text-align: center;
+    color: #c56a0a;
+  }
+  
+  .u-possible-move-list {
+    position: absolute;
+    font-weight: 700;
+    font-family: Arvo;
+    padding: 5px;
+    margin: 15px auto 0 26px;
+    border: 3px solid #2d2a2a;
+    border-radius: 10px;
+    background-color: #c56a0a;
+    text-align: center;
+    color: #121111;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -500px;
+    left: 350px;
+    list-style: none;
+  }
+  
+  .u-move-list-title-actions {
+    position: relative;
+    font-weight: 700;
+    font-family: Arvo;
+    padding: 5px;
+    margin: 15px auto 0 26px;
+    text-align: center;
+    text-align: left;
+    color: #c56a0a;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -500px;
+    left: 350px;
+    list-style: none;
+  }
+  
+  .u-possible-move-added {
+    position: relative;
+    font-weight: 700;
+    font-family: Arvo;
+    padding: 5px;
+    margin: 15px auto 0 26px;
+    border: 3px solid #2d2a2a;
+    border-radius: 10px;
+    background-color: #585858;
+    text-align: center;
+    color: #121111;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -500px;
+    left: 350px;
+    list-style: none;
+  }
+  
+  .u-move-list-title {
+    left: -250px;
+    top: 600px;
+    position: absolute;
+    font-weight: 700;
+    font-family: Arvo;
+    margin: 30px auto 0 26px;
+    text-align: left;
+    color: #c56a0a;
+  }
+  
+  .u-move-list-clear {
+    left: -250px;
+    top: -375px;
+    position: relative;
+    font-weight: 700;
+    font-family: Arvo;
+    margin: 30px auto 0 26px;
+    text-align: left;
+    border: 2px solid #2d2a2a;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #c56a0a;
+    display: inline-block;
+    color: #000000;
+  }
+  
+  @media (max-width: 1199px) {
+    .u-section-4 .u-form-1 {
+      margin-right: 370px;
+      margin-left: 0;
+    }
+  
+    .u-section-4 .u-btn-1 {
+      border-style: none;
+      padding: 8px 33px;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .u-section-4 .u-form-1 {
+      margin-right: 150px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .u-section-4 .u-form-1 {
+      margin-right: 0;
+    }
+  }
+  
+  .u-battlegrounds-listed-0 {
+    position: absolute;
+    font-weight: 700;
+    font-family: Arvo;
+    padding: 5px;
+    margin: 15px auto 0 26px;
+    text-align: center;
+    text-align: left;
+    color: #c56a0a;
+    text-align: left;
+    position: relative;
+    right: 350px;
+    list-style: none;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .u-possible-move-list-mini {
+    position: absolute;
+    font-weight: 700;
+    font-family: Arvo;
+    width: 400px;
+    padding: 2px;
+    margin: 15px 5px 0 10px;
+    border: 3px solid #2d2a2a;
+    border-radius: 10px;
+    background-color: #c56a0a;
+    text-align: center;
+    color: #121111;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    list-style: none;
+  }
+  
+  .u-possible-actions-battlegrounds {
+    position: absolute;
+    font-weight: 700;
+    font-family: Arvo;
+    width: 400px;
+    padding: 2px;
+    margin: 15px 5px 0 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -440px;
+    left: 100px;
+    list-style: none;
+  }
+  
+  .u-battle-button {
+    top: -350px;
+    left: 700px;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+  }
+  
+  .u-skelly-div {
+    height: 500px;
+    max-height: 500px;
+  }
+  
+  .u-skelly-large {
+    height: 1000px;
+    max-height: 1000px;
+  }
