@@ -1672,6 +1672,7 @@ function sendToBattle(tokenId, actionInt) {
                 let opponentid = parseInt(document.getElementById("div-enemy-skeletoon").getAttribute("opponentId"));
                 let contractFunctionData2 = contractBattles.methods.challengeSkeletoon(opponentid, tokenId).encodeABI();
                 let entry = document.getElementById("div-enemy-skeletoon").getAttribute("entry");
+                if (entry != 0) {
                 contractBattles.methods.getGasFee().call((err,result) =>{
                     console.log("WEI");
                     console.log(web3.utils.toWei(result));
@@ -1699,7 +1700,35 @@ function sendToBattle(tokenId, actionInt) {
                         console.log(err);
                 });
                 });
-                
+            } else {
+                contractBattles.methods.getGasFee().call((err,result) =>{
+                    console.log("WEI");
+                    console.log(web3.utils.toWei(result));
+                    console.log(web3.utils.toWei(entry));  
+                    console.log("just");
+                    console.log(result);
+                    console.log(entry);  
+                    console.log("type of ");
+                    console.log(typeof result);
+                    console.log(typeof entry);
+
+
+                    web3.eth
+                    .sendTransaction({
+                        from: acc[0],
+                        to: contractIDBattles,
+                        value: parseInt(result),
+                        data: contractFunctionData2,
+                    })
+                    .on("receipt", function (receipt) {
+                        console.log(receipt);
+                        let logID = web3.utils.hexToNumber(receipt.logs[0].topics[3]);
+                        appendLog(logID)
+                    }).on('error', function(err, receipt){
+                        console.log(err);
+                });
+                });
+            }
               }).on('error', function(err, receipt){
                 console.log(err);
             });
