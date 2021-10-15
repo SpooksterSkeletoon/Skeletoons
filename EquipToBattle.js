@@ -17,6 +17,14 @@ window.onload = function () {
   document.getElementById("battlebuttonlog").onclick = function show() {
     showBattleLog();
   };
+
+  document.getElementById("registertoken").onclick = function show() {
+    registerSkeletoon();
+  };
+
+  document.getElementById("removetoken").onclick = function show() {
+    removeFromBattleGrounds();
+  };
 };
 var walletID = "x";
 var theTransactionHash = "";
@@ -1327,6 +1335,82 @@ var getJSON = function (url, callback) {
   };
   xhr.send();
 };
+
+function registerSkeletoon() {
+    let tokenid = document.getElementById("tokenidregister").value;
+  
+    if (window.ethereum) {
+      window.web3 = new Web3(ethereum);
+      ethereum
+        .enable()
+        .then(() => {
+          console.log("Ethereum enabled");
+          web3.eth.getAccounts(async function (err, acc) {
+            if (err != null) {
+              self.setStatus("There was an error fetching your accounts");
+              return;
+            }
+            if (acc.length > 0) {
+              var contractBattles = new web3.eth.Contract(abibattles, contractIDBattles);
+              let contractFunctionData = contractBattles.methods.registerToBattleGrounds(tokenid).encodeABI();
+              web3.eth
+                .sendTransaction({
+                  from: acc[0],
+                  to: contractIDBattles,
+                  data: contractFunctionData,
+                })
+                .on("receipt", async function (receipt) {
+                  console.log(receipt);
+                });
+            }
+          });
+        })
+        .catch(() => {
+          console.warn("User didn't allow access to accounts.");
+          waitLogin();
+        });
+    } else {
+      console.log("ERROR.");
+    }
+  }
+  
+  function removeFromBattleGrounds() {
+    let tokenid = document.getElementById("returnfrombattlegrounds").value;
+  
+    if (window.ethereum) {
+      window.web3 = new Web3(ethereum);
+      ethereum
+        .enable()
+        .then(() => {
+          console.log("Ethereum enabled");
+          web3.eth.getAccounts(async function (err, acc) {
+            if (err != null) {
+              self.setStatus("There was an error fetching your accounts");
+              return;
+            }
+            if (acc.length > 0) {
+              var contractBattles = new web3.eth.Contract(abibattles, contractIDBattles);
+              let contractFunctionData = contractBattles.methods.removeFromBattlegrounds(tokenid).encodeABI();
+              web3.eth
+                .sendTransaction({
+                  from: acc[0],
+                  to: contractIDBattles,
+                  data: contractFunctionData,
+                })
+                .on("receipt", async function (receipt) {
+                  console.log(receipt);
+                });
+            }
+          });
+        })
+        .catch(() => {
+          console.warn("User didn't allow access to accounts.");
+          waitLogin();
+        });
+    } else {
+      console.log("ERROR.");
+    }
+  }
 
 function battleGrounds() {
   // DELETE ALREADY SHOWING NFTs
