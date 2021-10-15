@@ -1512,8 +1512,6 @@ function sendToBattle(tokenId, actionInt) {
               return;
             }
             if (acc.length > 0) {
-              console.log(actionInt);
-              console.log(tokenId);
               var contractBattles = new web3.eth.Contract(abibattles, contractIDBattles);
               let contractFunctionData = contractBattles.methods.setActionListOwner(tokenId, actionInt).encodeABI();
               web3.eth
