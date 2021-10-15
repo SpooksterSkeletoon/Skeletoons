@@ -1531,7 +1531,7 @@ function sendToBattle(tokenId, actionInt) {
                       .sendTransaction({
                         from: acc[0],
                         to: contractIDBattles,
-                        value: parseInt(web3.utils.toWei(entry)) + parseInt(result),
+                        value: parseInt(web3.utils.toWei(prize)) + parseInt(result),
                         data: contractFunctionData2,
                       })
                       .on("receipt", async function (receipt) {
