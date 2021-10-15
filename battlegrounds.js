@@ -1327,42 +1327,42 @@ var getJSON = function (url, callback) {
 };
 
 function connectWallet() {
-  if (window.ethereum) {
-    window.web3 = new Web3(ethereum);
-    ethereum
-      .enable()
-      .then(async () => {
-        let chain = await web3.eth.getChainId();
-        console.log(chain);
-        if (chain != networkChain) {
-          document.getElementById("demo").innerHTML = "Please use fantom network!";
-          return;
-        }
-        console.log("Ethereum enabled");
-        web3.eth.getAccounts(function (err, acc) {
-          if (err != null) {
-            self.setStatus("There was an error fetching your accounts");
+    if (window.ethereum) {
+      window.web3 = new Web3(ethereum);
+      ethereum
+        .enable()
+        .then(async () => {
+          let chain = await web3.eth.getChainId();
+          console.log(chain);
+          if (chain != networkChain) {
+            document.getElementById("demo").innerHTML = "Please use fantom network!";
             return;
           }
-          if (acc.length > 0) {
-            console.log(acc);
-            walletID = acc[0];
-            //document.getElementById("connect wallet").innerHTML = acc[0];
-            //document.getElementById("connect wallet").style = "width: 150px; display: inline-block;"
-            document.getElementById("demo").innerHTML = "CONNECTED! WALLET:" + acc[0];
-            return;
-          }
+          console.log("Ethereum enabled");
+          web3.eth.getAccounts(function (err, acc) {
+            if (err != null) {
+              self.setStatus("There was an error fetching your accounts");
+              return;
+            }
+            if (acc.length > 0) {
+              console.log(acc);
+              walletID = acc[0];
+              //document.getElementById("connect wallet").innerHTML = acc[0];
+              //document.getElementById("connect wallet").style = "width: 150px; display: inline-block;"
+              document.getElementById("demo").innerHTML = "CONNECTED! WALLET:" + acc[0];
+              return;
+            }
+          });
+        })
+        .catch(() => {
+          console.warn("User didn't allow access to accounts.");
+          document.getElementById("demo").innerHTML = "CONNECTION REJECTED!";
+          waitLogin();
         });
-      })
-      .catch(() => {
-        console.warn("User didn't allow access to accounts.");
-        document.getElementById("demo").innerHTML = "CONNECTION REJECTED!";
-        waitLogin();
-      });
-  } else {
-    console.log("Non-Ethereum browser detected. You should consider installing MetaMask.");
-    document.getElementById("demo").innerHTML = "METAMASK NOT FOUND! PLEASE INSTALL OR USE A DAPP!";
-  }
+    } else {
+      console.log("Non-Ethereum browser detected. You should consider installing MetaMask.");
+      document.getElementById("demo").innerHTML = "METAMASK NOT FOUND! PLEASE INSTALL OR USE A DAPP!";
+    }
 }
 
 function showBattleLog() {
