@@ -13,6 +13,10 @@ window.onload = function () {
   document.getElementById("battlegrounds").onclick = function show() {
     battleGrounds();
   };
+
+  document.getElementById("battlebuttonlog").onclick = function show() {
+    showBattleLog();
+  };
 };
 var walletID = "x";
 var theTransactionHash = "";
@@ -2140,3 +2144,39 @@ function dictionaryIntToAction(actionInt) {
     return "Deal (2-6) damage for following turns";
   }
 }
+
+function showBattleLog() {
+    // DELETE ALREADY SHOWING NFTs
+    const myNode = document.getElementById("battlelogshow");
+    while (myNode.firstChild) {
+      myNode.removeChild(myNode.lastChild);
+    }
+    let battleid = document.getElementById("battlelog").value;
+    var contractBattles = new web3.eth.Contract(abibattles, contractIDBattles);
+    contractBattles.methods.getBattleLog(battleid).call((err, result) => {
+      if (!err) {
+        console.log(result);
+        var breakline = document.createElement("br");
+        var battleLog = document.createElement("p");
+        tokenone = Math.floor(result / 10 ** 10);
+        dmgone = Math.floor((result / 10 ** 7) % 10 ** 3);
+        tokentwo = Math.floor((result / 10 ** 3) % 10 ** 4);
+        dmgtwo = result % 10 ** 3;
+        console.log(tokenone, dmgone, tokentwo, dmgtwo);
+        if (dmgtwo == 999) {
+          battleLog.innerHTML = "Token: " + tokenone + " Dealt: " + dmgone + " damage . Token: " + tokentwo + " Killed opponent Skeletoon.";
+        }
+        if (dmgone == 999) {
+          battleLog.innerHTML = "Token: " + tokenone + " Killed opponent Skeletoon. Token: " + tokentwo + " Dealt: " + dmgtwo + " damage.";
+        }
+        if (dmgone != 999 && dmgtwo != 999 && dmgone >= dmgtwo) {
+          battleLog.innerHTML = "Token: " + tokenone + " Dealt: " + dmgone + " damage . Token: " + tokentwo + " Dealt: " + dmgtwo + " damage. Winner token: " + tokenone;
+        }
+        if (dmgone != 999 && dmgtwo != 999 && dmgone < dmgtwo) {
+          battleLog.innerHTML = "Token: " + tokenone + " Dealt: " + dmgone + " damage . Token: " + tokentwo + " Dealt: " + dmgtwo + " damage. Winner token: " + tokentwo;
+        }
+        document.getElementById("battlelogshow").appendChild(breakline);
+        document.getElementById("battlelogshow").appendChild(battleLog);
+      } else document.getElementById("battlelogshow").innerHTML = err;
+    });
+  }
